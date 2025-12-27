@@ -66,7 +66,7 @@ Projeto criado para uso real entre amigos/colegas de trabalho — porque sonhar 
 ▶️ Como Usar
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/filipebezerra95/projeto--sistema-de-conferencia.git
 
 
 Abra o arquivo index.html no navegador
