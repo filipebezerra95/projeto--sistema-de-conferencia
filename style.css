@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Teko:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding: 20px;
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #040c52;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+.caixa-video {
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}
+
+video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: -3;
+}
+
+.mascara {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+  position: fixed;
+  top: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto 5rem auto;
+  padding: 1rem;
+}
+
+.input-section {
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  height: 20vh;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.number-inputs input {
+  width: calc(16.666% - 1rem);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.4);
+
+  background: rgba(255,255,255,0.85);
+  color: #111;
+}
+
+.number-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.results-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+}
+
+.showPass {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: zoomIn 0.3s ease;
+}
+
+.close-modal {
+  float: right;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #222;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ticketGames {
+  margin-bottom: 200px;
+}
+
+.ticketImg {
+  width: 180px;
+}
+
+.games-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.games-table th,
+.games-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.games-table th {
+  background: #222;
+  color: #fff;
+}
+
+.games-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  text-align: center;
+
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+footer span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 600;
+  color: #fff;
+}
+
+header,
+footer {
+  transition: all 0.3s ease;
+}
+
+header:hover,
+footer:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.35);
+}
+
+#sixResults {
+  border: 1px solid rgba(255, 215, 0, 0.6);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.35);
+}
+
+#fiveResults {
+  border: 1px solid rgba(0, 255, 200, 0.5);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.25);
+}
+
+#fourResults {
+  border: 1px solid rgba(0, 140, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.25);
+}
+
+#threeResults {
+  border: 1px solid rgba(180, 180, 180, 0.4);
+}
+
+.jogoo {
+  margin-top: 12px;
+  padding: 12px 14px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 0.9rem;
+}
+
+@keyframes floatSoft {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+#winner,
+#winner-silver,
+#winner-bronze {
+  animation: floatSoft 2.5s ease-in-out infinite;
+}
+
+
+
+
+@keyframes winnerPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.winner {
+  animation: winnerPulse 0.8s infinite;
+  background: gold;
+  border: 3px solid #2ecc71;
+}
+
+.winner-silver {
+  animation: winnerPulse 0.8s infinite;
+  background: rgb(173, 172, 165);
+  border: 3px solid #2e80cc;
+  color: #2b0bdf;
+}
+
+.winner-bronze {
+  animation: winnerPulse 0.8s infinite;
+  background: rgb(78, 32, 4);
+  border: 3px solid #2e80cc;
+  color: #f0f0f0;
+}
+
+.winner-fifth {
+  animation: winnerPulse 0.8s infinite;
+  background: rgb(14, 0, 48);
+  border: 3px solid #2e80cc;
+  color: #f0f0f0;
+}
+
+#celebration {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#fireworks {
+  width: 100%;
+  height: 100%;
+}
+
+/* 💸 dinheiro voando */
+.money {
+  position: fixed;
+  top: -50px;
+  font-size: 70px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.hit-game {
+  border: 3px solid #28a745;
+  background: linear-gradient(
+    90deg,
+    rgba(40, 167, 69, 0.15),
+    rgba(40, 167, 69, 0.05)
+  );
+  font-weight: 600;
+  animation: pulseHit 1.2s infinite;
+}
+
+@keyframes pulseHit {
+  0% {
+    box-shadow: 0 0 0 rgba(40, 167, 69, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(40, 167, 69, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(40, 167, 69, 0.5);
+  }
+}
+
+.dezena {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 3px;
+  border-radius: 50%;
+  background: #ddd;
+  color: #333;
+  font-weight: bold;
+}
+
+.dezena.hit {
+  background: gold;
+  color: #000;
+  box-shadow: 0 0 10px gold;
+  transform: scale(1.1);
+}
+
+
+/*responsividade*/
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+
+  main {
+    padding: 0.5rem;
+  }
+
+  .input-section {
+    height: auto;
+  }
+
+  .number-inputs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+
+  .number-inputs input {
+    width: 100%;
+    height: 52px;
+    font-size: 22px;
+    padding: 0;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .results-section div {
+    font-size: 14px;
+  }
+
+  .glass-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .jogoo {
+    font-size: 0.85rem;
+  }
+
+  .jogo {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .games-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .modal {
+    width: 95%;
+    max-height: 90vh;
+    padding: 15px;
+  }
+
+  .close-modal {
+    font-size: 24px;
+  }
+
+  .money {
+    font-size: 40px;
+  }
+
+  footer {
+    position: static;
+    padding: 12px;
+  }
+}
+}

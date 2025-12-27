@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Conferencia Mega da Virada - 2025</title>
+  </head>
+  <!-- EFEITOS DE VITÓRIA -->
+  <div id="celebration">
+    <canvas id="fireworks"></canvas>
+  </div>
+
+  <audio id="championMusic" src="./assets/we-are-the-champions.mp3"></audio>
+
+  <body>
+    <header>
+      <h1>Conferidor de Bolão Mega da Virada-2025</h1>
+      <h2>Sistema de conferencia de Jogos</h2>
+    </header>
+    <div class="caixa-video">
+      <video src="./assets/amigos-de sucesso.mp4" autoplay muted loop></video>
+      <div class="mascara"></div>
+    </div>
+    <main>
+      <section class="input-section">
+        <h3>Insira os números sorteados:</h3>
+        <div class="number-inputs">
+          <input type="number" id="num1" min="1" max="60" placeholder="Nº1" />
+          <input type="number" id="num2" min="1" max="60" placeholder="Nº2" />
+          <input type="number" id="num3" min="1" max="60" placeholder="Nº3" />
+          <input type="number" id="num4" min="1" max="60" placeholder="Nº4" />
+          <input type="number" id="num5" min="1" max="60" placeholder="Nº5" />
+          <input type="number" id="num6" min="1" max="60" placeholder="Nº6" />
+        </div>
+        <button id="checkResultsBtn">Conferir Resultados</button>
+      </section>
+
+      <section class="results-section glass-card">
+        <div class="jogoo">
+          <h3>Resultados:</h3>
+          <div id="noWinnersMessage"></div>
+          <div id="sixResults">
+            <h3>Jogos que acertaram 6 dezenas:</h3>
+          </div>
+          <div id="fiveResults">
+            <h3>Jogos que acertaram 5 dezenas:</h3>
+          </div>
+          <div id="fourResults">
+            <h3>Jogos que acertaram 4 dezenas:</h3>
+          </div>
+          <div id="threeResults">
+            <h3>Jogos que acertaram 3 dezenas:</h3>
+          </div>
+        </div>
+      </section>
+      <section class="showPass">
+        <button id="showPassBtn">Mostrar bilhete de Jogos</button>
+      </section>
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+          <button class="close-modal" id="closeModal">✖</button>
+          <h2>Jogos do Bolão</h2>
+          <div class="ticketGames">
+            <!-- Bilhetes de jogos serão exibidos aqui -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Aplicação criada e Desenvolvida por:</p>
+      <span>FILIPE BEZERRA</span>
+    </footer>
+  </body>
+  <script src="numbersChoise.js"></script>
+  <script src="script.js"></script>
+</html>
