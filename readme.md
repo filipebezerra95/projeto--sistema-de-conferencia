@@ -63,7 +63,12 @@ Projeto criado para uso real entre amigos/colegas de trabalho — porque sonhar 
 │
 └── README.md
 
-como usar 
+▶️ Como Usar
+Clone o repositório:
+
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+
 Abra o arquivo index.html no navegador
 
 Insira os 6 números sorteados
